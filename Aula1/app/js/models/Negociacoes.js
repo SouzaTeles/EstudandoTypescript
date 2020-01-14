@@ -6,7 +6,9 @@ class Negociacoes {
     adiciona(negociacao) {
         this._negociacoes.push(negociacao);
     }
+    //Devolve um array de negociacao
     paraArray() {
-        return this._negociacoes;
+        //Retorna um novo array, caso contrario retornaria a referencia, podendo ser alterado.
+        return [].concat(this._negociacoes);
     }
 }
