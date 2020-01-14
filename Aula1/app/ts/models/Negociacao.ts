@@ -3,7 +3,7 @@ class Negociacao {
     // private _quantidade : Number;
     // private _valor : Number;
 
-    constructor(private _data : Date, private _quantidade : Number, private _valor : Number){
+    constructor(private _data : Date, private _quantidade : number, private _valor : number){
         // this._data = data;
         // this._quantidade = quantidade;
         // this._valor = valor;
