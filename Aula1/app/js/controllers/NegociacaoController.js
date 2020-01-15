@@ -1,9 +1,11 @@
 class NegociacaoController {
     constructor() {
         this._negociacoes = new Negociacoes(); //O Typescript infere o tipo
+        this._negociacoesView = new NegociacaoView('#negociacoesView'); //O Typescript infere o tipo
         this._inputData = document.querySelector('#data');
         this._inputQuantidade = document.querySelector('#quantidade');
         this._inputValor = document.querySelector('#valor');
+        this._negociacoesView.update();
     }
     adiciona(event) {
         event.preventDefault();

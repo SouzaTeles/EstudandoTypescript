@@ -3,11 +3,13 @@ class NegociacaoController {
     private _inputQuantidade: HTMLInputElement;
     private _inputValor: HTMLInputElement;
     private _negociacoes = new Negociacoes(); //O Typescript infere o tipo
+    private _negociacoesView = new NegociacaoView('#negociacoesView'); //O Typescript infere o tipo
 
     constructor() {
         this._inputData = <HTMLInputElement>document.querySelector('#data')
         this._inputQuantidade = <HTMLInputElement>document.querySelector('#quantidade')
         this._inputValor = <HTMLInputElement>document.querySelector('#valor')
+        this._negociacoesView.update();
     }
     adiciona(event: Event) {
         event.preventDefault();
