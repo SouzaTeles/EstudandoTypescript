@@ -1,10 +1,15 @@
-class NegociacaoController {
+import { NegociacaoView } from '../views/NegociacaoView';
+import { MensagemView } from '../views/MensagemView';
+import { Negociacoes } from '../models/Negociacoes';
+import { Negociacao } from '../models/Negociacao';
+
+export class NegociacaoController {
     private _inputData: JQuery;
     private _inputQuantidade: JQuery;
     private _inputValor: JQuery;
     private _negociacoes = new Negociacoes(); //O Typescript infere o tipo
-    private _negociacoesView = new Views.NegociacaoView('#negociacoesView'); 
-    private _mensagemView = new Views.MensagemView('#mensagemView'); 
+    private _negociacoesView = new NegociacaoView('#negociacoesView');
+    private _mensagemView = new MensagemView('#mensagemView');
 
     constructor() {
         this._inputData = $('#data')
@@ -19,7 +24,7 @@ class NegociacaoController {
             new Date(this._inputData.val().replace(/-/g, ',')),
             parseInt(this._inputQuantidade.val()),
             parseFloat(this._inputValor.val())
-            )
+        )
 
         this._negociacoes.adiciona(negociacao);
         this._negociacoesView.update(this._negociacoes);
