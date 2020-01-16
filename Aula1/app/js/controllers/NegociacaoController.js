@@ -25,7 +25,7 @@ System.register(["../views/index", "../models/index"], function (exports_1, cont
                 adiciona(event) {
                     event.preventDefault();
                     let data = new Date(this._inputData.val().replace(/-/g, ','));
-                    if (data.getDay() == DiaDaSemana.Sabado || data.getDay() == DiaDaSemana.Domingo) {
+                    if (!this.verificaDiaUtil) {
                         this._mensagemView.update('Somente negociações em dias uteis');
                         return;
                     }
@@ -33,6 +33,9 @@ System.register(["../views/index", "../models/index"], function (exports_1, cont
                     this._negociacoes.adiciona(negociacao);
                     this._negociacoesView.update(this._negociacoes);
                     this._mensagemView.update('Negociação adicionada com sucesso');
+                }
+                verificaDiaUtil(data) {
+                    return data.getDay() != DiaDaSemana.Domingo && data.getDay() != DiaDaSemana.Sabado;
                 }
             };
             exports_1("NegociacaoController", NegociacaoController);
