@@ -1,2 +1,2 @@
 const controller = new NegociacaoController();
-$('.form').on('submit', () => controller.adiciona.bind(controller));
+$('.form').submit(controller.adiciona.bind(controller));

@@ -25,10 +25,6 @@ class NegociacaoController {
         this._negociacoesView.update(this._negociacoes);
         this._mensagemView.update('Negociação adicionada com sucesso');
 
-        this._negociacoes.paraArray().forEach(negociacao => {
-            console.log(negociacao.data)
-            console.log(negociacao.quantidade)
-            console.log(negociacao.valor)
-        })
+
     }
 }
