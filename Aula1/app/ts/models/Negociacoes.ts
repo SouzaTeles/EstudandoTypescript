@@ -10,6 +10,6 @@ export class Negociacoes {
     //Devolve um array de negociacao
     paraArray() : Negociacao[]{
         //Retorna um novo array, caso contrario retornaria a referencia, podendo ser alterado.
-        return [].concat(this._negociacoes);
+        return ([] as Negociacao[]).concat(this._negociacoes);
     }
 }
