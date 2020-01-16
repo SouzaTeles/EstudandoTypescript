@@ -10,7 +10,5 @@ abstract class View<T> { //tipo generico
         this._elemento.innerHTML = this.template(model)
     }
 
-    template(model: T): string {
-        throw new Error('Você deve implementar o metodo template');
-    }
+    abstract template(model: T): string;
 }
