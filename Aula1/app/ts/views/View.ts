@@ -1,5 +1,5 @@
-class View<T> { //tipo generico
-    protected _elemento: Element;
+abstract class View<T> { //tipo generico
+    private _elemento: Element;
 
     constructor(selector: string) {
 
