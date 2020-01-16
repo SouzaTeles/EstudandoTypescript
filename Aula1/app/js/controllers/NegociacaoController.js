@@ -1,6 +1,6 @@
 class NegociacaoController {
     constructor() {
-        this._negociacoes = new Negociacoes(); //O Typescript infere o tipo
+        this._negociacoes = new Negociacoes();
         this._negociacoesView = new NegociacaoView('#negociacoesView');
         this._mensagemView = new MensagemView('#mensagemView');
         this._inputData = $('#data');
