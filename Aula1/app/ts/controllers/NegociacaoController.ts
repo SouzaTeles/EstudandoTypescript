@@ -3,8 +3,8 @@ class NegociacaoController {
     private _inputQuantidade: JQuery;
     private _inputValor: JQuery;
     private _negociacoes = new Negociacoes(); //O Typescript infere o tipo
-    private _negociacoesView = new NegociacaoView('#negociacoesView'); 
-    private _mensagemView = new MensagemView('#mensagemView'); 
+    private _negociacoesView = new Views.NegociacaoView('#negociacoesView'); 
+    private _mensagemView = new Views.MensagemView('#mensagemView'); 
 
     constructor() {
         this._inputData = $('#data')
