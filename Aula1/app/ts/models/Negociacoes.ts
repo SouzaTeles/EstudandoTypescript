@@ -1,4 +1,5 @@
-import {Negociacao} from './Negociacao';
+import { Negociacao } from './Negociacao';
+import { logarTempoDeExecucao } from '../helpers/decorators/index';
 export class Negociacoes {
 
     // private _negociacoes: Array<Negociacao> = []; Sintaxe também valida
@@ -8,7 +9,8 @@ export class Negociacoes {
         this._negociacoes.push(negociacao);
     }
     //Devolve um array de negociacao
-    paraArray() : Negociacao[]{
+    @logarTempoDeExecucao(true)
+    paraArray(): Negociacao[] {
         //Retorna um novo array, caso contrario retornaria a referencia, podendo ser alterado.
         return ([] as Negociacao[]).concat(this._negociacoes);
     }
