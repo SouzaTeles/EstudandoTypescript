@@ -47,6 +47,10 @@ export class NegociacaoController {
     private verificaDiaUtil(data: Date) {
         return data.getDay() != DiaDaSemana.Domingo && data.getDay() != DiaDaSemana.Sabado
     }
+
+    importaDados(){
+        console.log('importa dados')
+    }
 }
 
 enum DiaDaSemana {
